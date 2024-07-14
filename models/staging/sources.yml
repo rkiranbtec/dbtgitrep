@@ -1,0 +1,11 @@
+version: 2
+sources:
+    - name: snowflake_data
+      database: "{{('dbt_db')}}"
+      schema: dev
+      tables:
+        - name: RAW_LINEITEM
+        - name: RAW_NATION
+        - name: RAW_ORDERS
+        - name: RAW_CUSTOMER 
+      

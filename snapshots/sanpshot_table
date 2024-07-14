@@ -1,0 +1,12 @@
+{% snapshot sanpshot_table %}
+{{ 
+    config(
+        target_schema='snapshot',
+        strategy='timestamp',
+        unique_key='id',
+        updated_at='updated_at'
+    )
+ }}
+select * 
+from {{ref( 'cust')}}
+{% endsnapshot %}
