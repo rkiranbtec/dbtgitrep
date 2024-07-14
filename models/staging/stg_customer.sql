@@ -1,0 +1,7 @@
+{{ config(materialized='table') }}
+
+WITH tb1 as(
+    select
+    *
+    from {{source('snowflake_data','RAW_CUSTOMER')}})
+select * from tb1
