@@ -1,7 +1,7 @@
 version: 2
 sources:
     - name: snowflake_data
-      database: "{{('dbt_db')}}"
+      database: "{{('sales')}}"
       schema: dev
       tables:
         - name: RAW_LINEITEM
