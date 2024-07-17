@@ -1,3 +1,5 @@
+{{ config(materialized='table') }}
+
 select 
     o.order_key,
     o.order_status,
@@ -10,7 +12,7 @@ select
     c.customer_name,
     n.customer_nation
     
-from {{ ref('stg_orders') }} as o 
+from {{ ref('stg_orders') }} as o
     
     inner join {{ ref('order_lineitem') }} l 
         on l.order_key = o.order_key 
