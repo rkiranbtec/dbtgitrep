@@ -39,10 +39,16 @@ sources:
               - not_null
            - name: c_name
              tests:
-             - not_null
+               - not_null
+        - name: RAW_SUPPLIER
+        - name: RAW_PARTSUPP
+        - name: RAW_PART
+        - name : RAW_REGION
+        - name : RAW_CUSTOMER_NATION
  
     - name: snapshot_tables
       database: "{{('sales')}}"
       schema: DWH
       tables:
         - name: snap_ordersdetails
+      
